@@ -29,10 +29,11 @@ float wallis_pi(int a);
     int numerator = 1,denominator = 1;
     float pi_value;
 
-    for (int i = 1; i<=a ; i++)
+    for (int i = 0; i<=a ; i++)
         {
-        numerator *= 4 *  i *i;
-        denominator *= (4 * i * i - 1);
+        int k = i +1;
+        numerator *= 4 *  k *k;
+        denominator *= (4 * k * k - 1);
         }
         
     
