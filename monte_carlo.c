@@ -39,5 +39,20 @@ int main(void) {
   }
 }
 
-
+float mc_pi(int a);
+{
+  float inside_circle = 0;
+  float pi_value;
+  for (int i =0; i <= a ; i++) {
+    float x_cordinate, y_cordinate, distance;
+    x_cordinate = frandom();
+    y_cordinate = frandom();
+    distance = (x_cordinate - 1) * (x_cordinate - 1) + (y_cordinate - 1) * (y_cordinate - 1);
+    if (distance <= 1 ) {
+      inside_circle++;
+    }
+  }   
+  pi_value = (float) (4 * inside_circle/a);
+  return pi_value;
+}
 
