@@ -35,18 +35,7 @@ float wallis_pi(int a);
         denominator *= (4 * i * i - 1);
         }
         
-    float real_value;
-    real_value = numerator/denominator;
     
-    for (int j = 1; j < 5 ;j++)
-        {
-        float remainder, decimal_number, decimal_part;
-        remainder = numerator % denominator;
-        remainder *= 10;
-        decimal_number = remainder/denominator;
-        decimal_part = decimal_number * pow(10,-j);
-        real_value += decimal_part;
-        }
-    pi_value = 2 * real_value;
-    return (pi_value);
+    pi_value = (float)numerator/denominator;
+    return pi_value;
 }
