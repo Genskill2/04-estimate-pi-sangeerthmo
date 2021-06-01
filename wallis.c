@@ -24,19 +24,15 @@ int main(void) {
     }
   }
 }
-float wallis_pi(int a);
+float wallis_pi(int a)
 {
-    int numerator = 1,denominator = 1;
-    float pi_value;
-
-    for (int i = 0; i<=a ; i++)
-        {
-        int k = i +1;
-        numerator *= 4 *  k *k;
-        denominator *= (4 * k * k - 1);
-        }
-        
     
-    pi_value = (float)numerator/denominator;
-    return pi_value;
+	long double  num = 1 ,  pi_value = 1 ;
+	
+	for (int j =1 ; j = 1 + a ; j++)
+    {
+    	long double num = 4 * (j+1) * (j+1);
+    	pi_value *= (num/(num - 1));
+	}
+	return pi_value * 2;
 }
