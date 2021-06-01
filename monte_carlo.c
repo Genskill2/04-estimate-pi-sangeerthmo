@@ -3,10 +3,10 @@
 #include <stdio.h>
 #include <math.h>
 
-float mc_pi(int);
+float mc_pi(int );
 
 float frandom() {
-  long int q = random();
+  long int q = rand();
   float ret = (float)q/(float)RAND_MAX;
   return ret;
 }
@@ -39,16 +39,15 @@ int main(void) {
   }
 }
 
-float mc_pi(int a);
-{
+float mc_pi(int a) {
   float inside_circle = 0;
   float pi_value;
   for (int i =0; i <= a ; i++) {
     float x_cordinate, y_cordinate, distance;
     x_cordinate = frandom();
     y_cordinate = frandom();
-    distance = (x_cordinate - 1) * (x_cordinate - 1) + (y_cordinate - 1) * (y_cordinate - 1);
-    if (distance <= 1 ) {
+    distance = (x_cordinate - 0.5) * (x_cordinate - 0.5) + (y_cordinate - 0.5) * (y_cordinate - 0.5);
+    if (distance <= 0.25 ) {
       inside_circle++;
     }
   }   
