@@ -46,8 +46,8 @@ float mc_pi(int a) {
     float x_cordinate, y_cordinate, distance;
     x_cordinate = frandom();
     y_cordinate = frandom();
-    distance = (x_cordinate - 0.5) * (x_cordinate - 0.5) + (y_cordinate - 0.5) * (y_cordinate - 0.5);
-    if (distance <= 0.25 ) {
+    distance = (x_cordinate ) * (x_cordinate) + (y_cordinate ) * (y_cordinate );
+    if (distance <= 1) {
       inside_circle++;
     }
   }   
