@@ -29,10 +29,10 @@ float wallis_pi(int a)
     
 	long double  num = 1 ,  pi_value = 1 ;
 	
-	for (int j =1 ; j = 1 + a ; j++)
+	for (int j =1 ; j <= a ; j++)
     {
-    	long double num = 4 * (j+1) * (j+1);
-    	pi_value *= (num/(num - 1));
+    	long double num = 4 * (j) * (j);
+    	pi_value *= (float)(num/(num - 1));
 	}
 	return pi_value * 2;
 }
